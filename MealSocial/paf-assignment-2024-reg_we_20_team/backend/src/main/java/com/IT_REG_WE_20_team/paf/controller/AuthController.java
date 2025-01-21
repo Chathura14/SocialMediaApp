@@ -25,20 +25,12 @@ public class AuthController {
     }
 
     @GetMapping("/api/user")
-@ResponseBody
-public ResponseEntity<Object> getUsername(@AuthenticationPrincipal OAuth2User principal) {
-    if (principal != null) {
-        String name = principal.getAttribute("name");
-        String email = principal.getAttribute("email");
-        String picture = principal.getAttribute("picture");
-
-        // Check if the user already exists
-        if (userService.existsByEmail(email)) {
-            // Return the existing user
-            User existingUser = userService.findByEmail(email);
-            return ResponseEntity.ok(existingUser);
-        } else {
-            // Create new user
+    @ResponseBody
+    public ResponseEntity<Object> getUsername(@AuthenticationPrincipal OAuth2User principal) {
+        if (principal != null) {
+            String name = principal.getAttribute("name");
+            String email = principal.getAttribute("email");
+            String picture = principal.getAttribute("picture");
             User user = new User();
             user.setEmail(email);
             user.setName(name);
@@ -46,10 +38,8 @@ public ResponseEntity<Object> getUsername(@AuthenticationPrincipal OAuth2User pr
             user.setSource(RegistrationSource.GOOGLE);
 
             return userService.createUser(user);
+        } else {
+            return ResponseEntity.status(Response.SC_UNAUTHORIZED).build();
         }
-    } else {
-        return ResponseEntity.status(Response.SC_UNAUTHORIZED).build();
     }
-}
-
 }
