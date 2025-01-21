@@ -20,7 +20,7 @@ function App() {
     const backendUrl = process.env.REACT_APP_BACKEND_URL; // Get backend URL from env
 
     // Make the API request
-    fetch(`${backendUrl}/api/endpoint`) // Replace with your actual endpoint
+    fetch(`${backendUrl}/Login`) // Replace with your actual endpoint
       .then((response) => response.json())
       .then((data) => setData(data)) // Store the response data in state
       .catch((error) => setError(error)); // Handle errors
