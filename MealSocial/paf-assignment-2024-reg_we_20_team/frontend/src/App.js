@@ -19,11 +19,22 @@ function App() {
   useEffect(() => {
     const backendUrl = process.env.REACT_APP_BACKEND_URL; 
 
+    console.log('Backend URL:', backendUrl); // Log the backend URL for debugging
+
     // Make the API request
     fetch(`${backendUrl}/api/user`) 
-      .then((response) => response.json())
-      .then((data) => setData(data)) 
-      .catch((error) => setError(error)); 
+      .then((response) => {
+        console.log('Response Status:', response.status); // Log the response status
+        return response.json();
+      })
+      .then((data) => {
+        console.log('API Response Data:', data); // Log the data returned from API
+        setData(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error); // Log any errors that occur
+        setError(error);
+      });
   }, []); 
 
   if (error) {
