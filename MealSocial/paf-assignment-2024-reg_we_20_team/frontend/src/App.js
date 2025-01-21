@@ -13,18 +13,18 @@ import CreateWorkoutPlan from "./Pages/CreateWorkoutPlan";
 import CreateMealPlan from "./Pages/CreateMealPlan";
 
 function App() {
-  const [data, setData] = useState(null); // State to store fetched data
-  const [error, setError] = useState(null); // State to store errors
+  const [data, setData] = useState(null); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
-    const backendUrl = process.env.REACT_APP_BACKEND_URL; // Get backend URL from env
+    const backendUrl = process.env.REACT_APP_BACKEND_URL; 
 
     // Make the API request
-    fetch(`${backendUrl}/Login`) // Replace with your actual endpoint
+    fetch(`${backendUrl}/api/user`) 
       .then((response) => response.json())
-      .then((data) => setData(data)) // Store the response data in state
-      .catch((error) => setError(error)); // Handle errors
-  }, []); // Empty dependency array ensures this runs once when the component mounts
+      .then((data) => setData(data)) 
+      .catch((error) => setError(error)); 
+  }, []); 
 
   if (error) {
     return <div>Error: {error.message}</div>;
