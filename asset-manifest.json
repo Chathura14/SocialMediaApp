@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/SocialMediaApp/static/css/main.6296a4b9.css",
+    "main.js": "/SocialMediaApp/static/js/main.e8c0f432.js",
+    "static/js/976.660c4060.chunk.js": "/SocialMediaApp/static/js/976.660c4060.chunk.js",
+    "static/js/893.4a26dd0d.chunk.js": "/SocialMediaApp/static/js/893.4a26dd0d.chunk.js",
+    "static/media/CreateBG.png": "/SocialMediaApp/static/media/CreateBG.9f9af40870189e58f59d.png",
+    "static/media/legsImage.avif": "/SocialMediaApp/static/media/legsImage.aac241573cb34fe4cf77.avif",
+    "static/media/chestImg.avif": "/SocialMediaApp/static/media/chestImg.39e7e337f60e1036bf10.avif",
+    "static/media/logoGym.png": "/SocialMediaApp/static/media/logoGym.69a3e2d476e605edc936.png",
+    "static/media/armsImage.avif": "/SocialMediaApp/static/media/armsImage.7f30cef87e0fc608fe9d.avif",
+    "static/media/backImage.avif": "/SocialMediaApp/static/media/backImage.8a6fa4eaebf9b61de618.avif",
+    "index.html": "/SocialMediaApp/index.html",
+    "main.6296a4b9.css.map": "/SocialMediaApp/static/css/main.6296a4b9.css.map",
+    "main.e8c0f432.js.map": "/SocialMediaApp/static/js/main.e8c0f432.js.map",
+    "976.660c4060.chunk.js.map": "/SocialMediaApp/static/js/976.660c4060.chunk.js.map",
+    "893.4a26dd0d.chunk.js.map": "/SocialMediaApp/static/js/893.4a26dd0d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6296a4b9.css",
+    "static/js/main.e8c0f432.js"
+  ]
+}
